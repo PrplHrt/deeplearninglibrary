@@ -68,7 +68,7 @@ class Linear(Layer):
 
 F = Callable[[Tensor], Tensor]
 
-class Activitation(Layer):
+class Activation(Layer):
     """
     An activation layer jsut applies a function
     elementwise to its inputs
@@ -97,6 +97,6 @@ def tanh_prime(x: Tensor) -> Tensor:
     y = tanh(x)
     return 1 - y ** 2
 
-class Tanh(Activitation):
+class Tanh(Activation):
     def __init__(self) -> None:
         super().__init__(tanh, tanh_prime)

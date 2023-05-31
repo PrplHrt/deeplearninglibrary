@@ -36,3 +36,5 @@ for x, y in zip(inputs, targets):
     # going to add in argmax for better output
     predicted = np.round(predicted)
     print(x, predicted, y)
+
+print(inputs, net.forward(inputs))
